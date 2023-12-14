@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+</break>
+</break>
+</break>
+
+{% block content %}
+
+
+
+<style>
+    .widthx{
+        width:10px;
+    }
+</style>
+
+<div class="container">
+    <table class="table widthx">
+        <thead>
+     
+          <tr>
+            <th scope="col">US Phone Numbers</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+        {% for phone in rphone %}
+          <tr>
+            
+            <td class="bg-primary">{{phone}}</td>
+            
+          </tr>
+          {%endfor%}
+        </tbody>
+      </table>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,78 @@
+{% extends "base.html" %} {% block content %}
+
+<style>
+  .widthx {
+    width: 80vw;
+  }
+</style>
+
+</break>
+</break>
+
+<div class="container">
+    <div class="row">
+
+        <form class="input-group widthx my-4" method="POST" action={% url 'regex'%}>
+            {% csrf_token %}
+            <span class="input-group-text"><strong>Enter Text</strong></span>
+            <textarea class="form-control" aria-label="With textarea" name="regexform" placeholder="Please enter the text here to perform regex on US phone numbers. Eg: Feel free to contact us at 223-223-2213 or 343-232-5653"></textarea>
+        </break>
+        <div class="container">
+            <button class="btn btn-outline-success my-2" type="submit">Regex</button>
+        </div>
+        </form>
+    </div>
+</div>
+
+
+</break>
+</break>
+
+<div class="container">
+    <div class="row">
+
+        <form class="input-group widthx my-4" method="POST" action={% url 'lemma'%}>
+            {% csrf_token %}
+            <span class="input-group-text"><strong>Enter Text</strong></span>
+            <textarea class="form-control" aria-label="With textarea" name="lemmaform" placeholder="Please enter the text here to perform lemma. Eg: Maycomb was an old town, but it was a tired old town when I first knew it."></textarea>
+        </break>
+        <div class="container">
+            <button class="btn btn-outline-primary my-2" type="submit">Lemma</button>
+        </div>
+        </form>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+
+        <form class="input-group widthx my-4" method="POST" action={% url 'pos' %}>
+            {% csrf_token %}
+            <span class="input-group-text"><strong>Enter Text</strong></span>
+            <textarea class="form-control" aria-label="With textarea" name="posform" placeholder="Please enter the text here to perform part of speech. Eg: I love the smell of napalm in the morning."></textarea>
+        </break>
+        <div class="container">
+            <button class="btn btn-outline-warning my-2" type="submit">POS</button>
+        </div>
+        </form>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+
+        <form class="input-group widthx my-4" method="POST" action={% url 'ner' %}>
+            {% csrf_token %}
+            <span class="input-group-text"><strong>Enter Text</strong></span>
+            <textarea class="form-control" aria-label="With textarea" name="nerform" placeholder="Please enter the text here to perform named entity recognition. Eg: The Federal Bureau of Investigation (FBI) is the domestic intelligence and security service of the United States and its principal federal law enforcement agency."></textarea>
+        </break>
+        <div class="container">
+            <button class="btn btn-outline-info my-2" type="submit">NER</button>
+        </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

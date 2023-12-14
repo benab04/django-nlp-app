@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+</break>
+</break>
+</break>
+
+{% block content %}
+
+
+
+<style>
+    .widthx{
+        width:10px;
+    }
+</style>
+
+<div class="container">
+    <table class="table widthx">
+        <thead>
+     
+          <tr>
+            <th scope="col">Results of lemmatization</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Unprocessed</th>
+                {% for i in unprocessed %}
+                <th scope="row">
+                <td class="bg-danger">{{i}}</td></th>
+                {%endfor%}
+            </tr>
+       
+            <tr>
+                <th scope="row">Lemmatized</th>
+                {% for i in lemmatized %}
+                <th scope="row">
+                <td class="bg-danger">{{i}}</td></th>
+                {%endfor%}
+            </tr>
+        </tbody>
+      </table>
+</div>
+
+
+{% endblock %}

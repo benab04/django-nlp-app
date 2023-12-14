@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+</break>
+</break>
+</break>
+
+{% block content %}
+
+
+
+<style>
+    .widthx{
+        width:10px;
+    }
+</style>
+
+<div class="container">
+    <table class="table widthx">
+        <thead>
+     
+          <tr>
+            <th scope="col">Results of Part of Speech Tagging</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Unpossed</th>
+                {% for i in unpossed %}
+                <th scope="row">
+                <td class="bg-danger">{{i}}</td></th>
+                {%endfor%}
+            </tr>
+       
+            <tr>
+                <th scope="row">Possed</th>
+                {% for i in possed %}
+                <th scope="row">
+                <td class="bg-primary">{{i}}</td></th>
+                {%endfor%}
+            </tr>
+
+            <tr>
+                <th scope="row">Explanations</th>
+                {% for i in explainpos %}
+                <th scope="row">
+                <td class="bg-success">{{i}}</td></th>
+                {%endfor%}
+            </tr>
+        </tbody>
+      </table>
+</div>
+
+
+{% endblock %}

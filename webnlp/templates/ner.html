@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+</break>
+</break>
+</break>
+
+{% block content %}
+
+
+
+<style>
+    .widthx{
+        width:10px;
+    }
+</style>
+
+<div class="container">
+    <table class="table widthx">
+        <thead>
+     
+          <tr>
+            <th scope="col">Results of Named Entity Recognition</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Ner </th>
+                {% for i in nertokenslabels %}
+                <th scope="row">
+                <td class="bg-danger">{{i}}</td></th>
+                {%endfor%}
+            </tr>
+       
+            <tr>
+                <th scope="row">Explanations</th>
+                {% for i in explainner %}
+                <th scope="row">
+                <td class="bg-danger">{{i}}</td></th>
+                {%endfor%}
+            </tr>
+        </tbody>
+      </table>
+</div>
+
+
+{% endblock %}
